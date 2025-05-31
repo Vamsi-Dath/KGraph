@@ -1,6 +1,8 @@
 import gradio as gr
 
 def load_file(file):
+    if not file:
+        return
     with open(file, "r") as f:
         contents = f.read()
     return contents
@@ -35,7 +37,7 @@ with gr.Blocks() as index:
                 variant="primary",
                 interactive=True
             )
-            alert_msg = gr.Textbox(label="Alert", interactive=False)
+            alert_msg = gr.Textbox(label="Status", interactive=False)
 
     button.click(
         lambda files: "Success!" if files else "No files uploaded.",
