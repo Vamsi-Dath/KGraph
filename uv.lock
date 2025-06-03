@@ -330,10 +330,14 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "gradio" },
+    { name = "pydantic" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "gradio", specifier = ">=5.32.0" }]
+requires-dist = [
+    { name = "gradio", specifier = ">=5.32.0" },
+    { name = "pydantic", specifier = ">=2.11.5" },
+]
 
 [[package]]
 name = "markdown-it-py"
