@@ -71,7 +71,7 @@ with gr.Blocks() as index:
 
             with gr.Accordion(label="LLM Configuration", open=False):
                     base_url = gr.Textbox(
-                        placeholder="baseurl", label="LLM Baseurl"
+                        value="https://api.openai.com/v1", label="LLM Baseurl"
                     )
                     api_key = gr.Textbox(
                         placeholder="API key",
