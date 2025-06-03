@@ -58,9 +58,9 @@ def index_file_uploaded(
 with gr.Blocks() as index:
     gr.Markdown('# Process Data')
     with gr.Row():
-        with gr.Row():
-            with gr.Column(scale=1):
-                gr.Markdown('## Upload Data')
+        with gr.Column(scale=1):
+            gr.Markdown('## Upload Data')
+            with gr.Row():
                 files = gr.File(
                     label="Allowed file types .json",
                     file_types=[".json"],
